@@ -1,12 +1,10 @@
 import 'package:appjam/data/event-data.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class DetailScreen extends StatefulWidget {
   final int price;
   final List<EventData> eventList;
-  DetailScreen(this.price, this.eventList);
+  const DetailScreen(this.price, this.eventList);
 
   @override
   State<DetailScreen> createState() => _DetailScreenState();
@@ -18,19 +16,19 @@ class _DetailScreenState extends State<DetailScreen> {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Color(0XFF87A922),
+      backgroundColor: const Color(0XFF87A922),
       appBar: AppBar(
         leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
               color: Colors.white,
             )),
         centerTitle: true,
-        backgroundColor: Color(0XFF87A922),
-        title: Text(
+        backgroundColor: const Color(0XFF87A922),
+        title: const Text(
           'LIMOSA',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
         ),
@@ -39,7 +37,7 @@ class _DetailScreenState extends State<DetailScreen> {
         child: PageView.builder(
           itemCount: widget.eventList.length,
           itemBuilder: (context, index) {
-            return Container(
+            return SizedBox(
               width: width * 0.8,
               height: height * 0.5,
               child: Padding(
@@ -62,16 +60,16 @@ class _DetailScreenState extends State<DetailScreen> {
                           height: height * 0.07,
                           child: ElevatedButton(
                             onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    const Color(0xff1E1E1E).withOpacity(0.5)),
                             child: Text(
                               widget.eventList[index].name,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 24.0,
                                   fontWeight: FontWeight.bold),
                             ),
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor:
-                                    Color(0xff1E1E1E).withOpacity(0.5)),
                           ),
                         ),
                         Positioned(
@@ -79,11 +77,11 @@ class _DetailScreenState extends State<DetailScreen> {
                           child: Container(
                             width: width * 0.89,
                             height: height * 0.3,
-                            color: Color(0xff1E1E1E).withOpacity(0.9),
+                            color: const Color(0xff1E1E1E).withOpacity(0.9),
                             child: Column(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 16.0),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 16.0),
                                   child: Text(
                                     'Ücret',
                                     style: TextStyle(
@@ -94,7 +92,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                   padding: const EdgeInsets.only(top: 16.0),
                                   child: Text(
                                     '${widget.price}₺',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         color: Colors.white, fontSize: 32.0),
                                   ),
                                 ),
@@ -102,7 +100,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                   padding: const EdgeInsets.only(top: 64.0),
                                   child: ElevatedButton(
                                     onPressed: () {},
-                                    child: Text(
+                                    child: const Text(
                                       'Rotaya Git',
                                       style: TextStyle(fontSize: 24.0, color: Colors.black),
                                     ),
