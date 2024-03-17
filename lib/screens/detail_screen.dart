@@ -1,4 +1,4 @@
-import 'package:appjam/data/event-data.dart';
+import 'package:appjam/data/event_data.dart';
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatefulWidget {

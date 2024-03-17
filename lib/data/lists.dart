@@ -1,4 +1,4 @@
-import 'package:appjam/data/event-data.dart';
+import 'package:appjam/data/event_data.dart';
 
 class Lists{
   List<EventData> museum = [
