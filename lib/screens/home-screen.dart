@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Center(
             child: Text(
           'LIMOSA',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
         )),
       ),
       body: Center(
@@ -76,6 +76,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: TextStyle(fontSize: 20.0),
                   )),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Konumunuz', style: TextStyle(fontSize: 16.0),),
+                Text(' Istanbul', style: TextStyle(color: Color(0XFFF7F6BB), fontSize: 20.0),),
+                Icon(Icons.location_on, color: Color(0XFFF7F6BB),)
+              ],
+            )
           ],
         ),
       ),
