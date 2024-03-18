@@ -184,6 +184,7 @@ class _RouteScreenState extends State<RouteScreen> {
                               color: const Color(0xffF7F6BB), size: width * 0.15))),
                 ],
               ),
+              SizedBox(height: height*0.02,)
             ],
           ),
         ),
